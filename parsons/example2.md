@@ -31,13 +31,13 @@ title: Example 2
             "message": "check code works for a string with no blank space",
             "initcode": "text = 'hi'",
             "code": "",
-            "variables": {"reversed":"'hi'"}
+            "variables": {"reversed":"hi"}
         },
         {
             "message": "check code works for \"a short sentence\"",
-            "initcode": "text = 'short sentence'",
+            "initcode": "text = 'a short sentence'",
             "code": "",
-            "variables": {}
+            "variables": {"reversed":"sentence short a"}
         }
     ]
   });
