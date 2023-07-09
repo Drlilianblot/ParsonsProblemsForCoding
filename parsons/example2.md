@@ -30,8 +30,8 @@ title: Example 2
             "initcode": "x = 1\ny = 2",
             "code": "",
             "variables": {
-                "x": 2,
-                "y": 1
+                {"variable":x, "expected": 2},
+                {"variable":y, "expected": 1}
             }
         }
     ]
