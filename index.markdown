@@ -72,18 +72,9 @@ Construct a program that swaps the values of variables <code>x</code> and <code>
     "lang": "en",
     "trashId": "p2-sortableTrash",
     "vartests": [
-        {
-            "message": "Testing with initial variable values x = 3 and y = 4",
-            "initcode": "x = 3\ny = 4",
-            "code": "",
-            "variables": {}
-        },
-        {
-            "message": "Testing with initial variable values x = 0 and y = 2",
-            "initcode": "x = 0\ny = 2",
-            "code": "",
-            "variables": {}
-        }
+        {initcode: "x = 0\ny=2", code: "", message: "Testing with initial variable values x = 0 and y = 2", variables: {x: 2}},
+        {initcode: "x = 3\ny=4\n", code: "", message: "Testing with initial variable values x = 3 and y = 4", variables: {x: 4, y: 3}}],
+        lang: "en"
     ]
   });
   parsonsPuzzle.init(initial);
