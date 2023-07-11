@@ -60,18 +60,18 @@
         helper variable <code>tmp</code>. You can change the names of the variables (<span
             class="jsparson-toggle"></span>)
         by clicking them.</p>
-    <div id="sortableTrash" class="sortable-code">
+    <div id="p1-sortableTrash" class="sortable-code">
         <p>Trash</p>
     </div>
-    <div id="sortable" class="sortable-code">
+    <div id="p1-sortable" class="sortable-code">
         <p>Solution</p>
     </div>
     <div style="clear:both;"></div>
     <p>
-        <a href="#" id="newInstanceLink">New instance</a>
-        <a href="#" id="feedbackLink">Get feedback</a>
+        <a href="#p1" id="p1-newInstanceLink">New instance</a>
+        <a href="#p1" id="p1-feedbackLink">Get feedback</a>
     </p>
-    <div id="unittest"></div>
+    <div id="p1"></div>
     <!-- <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.min.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery-ui.min.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/underscore-min.js"></script>
@@ -88,22 +88,22 @@
             "$$toggle::x::y::tmp$$\n";
         $(document).ready(function () {
             var parson = new ParsonsWidget({
-                'sortableId': 'sortable',
-                'trashId': 'sortableTrash',
+                'sortableId': 'p1-sortable',
+                'trashId': 'p1-sortableTrash',
                 'vartests': [{ initcode: "x = 0\ny=2", code: "", message: "Testing with initial variable values x = 0 and y = 2", variables: { x: 2 } },
                 { initcode: "x = 3\ny=4\n", code: "", message: "Testing with initial variable values x = 3 and y = 4", variables: { x: 4, y: 3 } }],
                 lang: "en"
             });
             parson.init(initial);
             parson.shuffleLines();
-            $("#newInstanceLink").click(function (event) {
+            $("#p1-newInstanceLink").click(function (event) {
                 event.preventDefault();
                 parson.shuffleLines();
             });
-            $("#feedbackLink").click(function (event) {
+            $("#p1-feedbackLink").click(function (event) {
                 event.preventDefault();
                 var fb = parson.getFeedback();
-                $("#unittest").html("<h2>Feedback from testing your program:</h2>" + fb.feedback);
+                $("#p1-").html("<h2>Feedback from testing your program:</h2>" + fb.feedback);
                 if (fb.success) { alert("Good, you solved the assignment!"); }
             });
         });
@@ -183,18 +183,18 @@
     <h2>Example of "unittests" in js-parsons</h2>
     <p>Your task is to construct a function which returns the index of the largest
         element in the array.</p>
-    <div id="unittest-sortableTrash" class="sortable-code">
+    <div id="p2-sortableTrash" class="sortable-code">
         <p>Trash</p>
     </div>
-    <div id="unittest-sortable" class="sortable-code">
+    <div id="p2-sortable" class="sortable-code">
         <p>Solution</p>
     </div>
     <div style="clear:both;"></div>
     <p>
-        <a href="#" id="unittest-newInstanceLink">New instance</a>
-        <a href="#" id="unittest-feedbackLink">Get feedback</a>
+        <a href="#p2" id="p2-newInstanceLink">New instance</a>
+        <a href="#p2" id="p2-feedbackLink">Get feedback</a>
     </p>
-    <div id="unittest-jsparson"></div>
+    <div id="p2"></div>
     <!-- <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.min.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery-ui.min.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/underscore-min.js"></script>
@@ -203,7 +203,7 @@
     <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt-stdlib.js"></script> -->
     <script>
-        var initial = "def maxindex(arg):\n" +
+        var p2initial = "def maxindex(arg):\n" +
             " ans = 0\n" +
             " for i in range(len(arg)):\n" +
             " if arg[i] > arg[ans]:\n" +
@@ -212,7 +212,7 @@
             "pass\n" +
             " return ans\n";
 
-        var unittests = 'import unittestparson\n' +
+        var p2unittests = 'import unittestparson\n' +
             'class myTests(unittestparson.unittest):\n' +
             '  def testOne(self):\n' +
             '    self.assertEqual(maxindex([0, 2, 4]),2,' +
@@ -232,21 +232,21 @@
 
 
         $(document).ready(function () {
-            var parson = new ParsonsWidget({
-                'sortableId': 'unittest-sortable',
-                'trashId': 'unittest-sortableTrash',
-                'unittests': unittests
+            var p2parson = new ParsonsWidget({
+                'sortableId': 'p2-sortable',
+                'trashId': 'p2-sortableTrash',
+                'unittests': p2unittests
             });
-            parson.init(initial);
-            parson.shuffleLines();
-            $("#unittest-newInstanceLink").click(function (event) {
+            p2parson.init(p2initial);
+            p2parson.shuffleLines();
+            $("#p2-newInstanceLink").click(function (event) {
                 event.preventDefault();
-                parson.shuffleLines();
+                p2parson.shuffleLines();
             });
-            $("#unittest-feedbackLink").click(function (event) {
+            $("#p2-feedbackLink").click(function (event) {
                 event.preventDefault();
-                var fb = parson.getFeedback();
-                $("#unittest-jsparson").html("<h2>Feedback from testing your program:</h2>" +
+                var fb = p2parson.getFeedback();
+                $("#p2-jsparson").html("<h2>Feedback from testing your program:</h2>" +
                     fb.feedback);
                 if (fb.success) { alert("Good, you solved the assignment!"); }
             });
