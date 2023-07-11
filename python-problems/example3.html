@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="https://js-parsons.github.io/js/js-parsons/lib/prettify.css" />
     <meta charset="utf8" />
     <link rel="stylesheet" href="https://127.0.0.1:50153/stylesheet?id=moyCosb3pjeLDKQ0">
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery-ui.min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt-stdlib.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/underscore-min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/lis.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/parsons.js"></script>
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Python Coding Multiple Parson’s Problems on One Page | Parsons UI Example</title>
+    <meta name="generator" content="Jekyll v3.9.3" />
+    <meta property="og:title" content="Python Coding Multiple Parson’s Problems on One Page" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description"
+        content="Drag or shuffle the blocks of code in the practice problems below. Remember to indent where appropriate by dragging blocks to the right. To check your work, press the “Get Feedback” button. To start over, press the “Reset Problem” button." />
+    <meta property="og:description"
+        content="Drag or shuffle the blocks of code in the practice problems below. Remember to indent where appropriate by dragging blocks to the right. To check your work, press the “Get Feedback” button. To start over, press the “Reset Problem” button." />
+    <link rel="canonical" href="/ParsonsProblemsForCoding/" />
+    <meta property="og:url" content="/ParsonsProblemsForCoding/" />
+    <meta property="og:site_name" content="Parsons UI Example" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Python Coding Multiple Parson’s Problems on One Page" />
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Drag or shuffle the blocks of code in the practice problems below. Remember to indent where appropriate by dragging blocks to the right. To check your work, press the “Get Feedback” button. To start over, press the “Reset Problem” button.","headline":"Python Coding Multiple Parson’s Problems on One Page","name":"Parsons UI Example","url":"/ParsonsProblemsForCoding/"}</script>
+    <!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet"
+        href="/ParsonsProblemsForCoding/assets/css/style.css?v=58b89b615edabeef69b52a8122da51bd4b360d60">
 </head>
 
 <body>
@@ -64,59 +96,6 @@
         });
     </script>
 
-    <h2>Variable Swap again</h2>
-    <p>Construct a program that swaps the values of variables <code>x</code> and <code>y</code> using the
-        helper variable <code>tmp</code>. You can change the names of the variables (<span
-            class="jsparson-toggle"></span>)
-        by clicking them.</p>
-    <div id="anotherone-sortableTrash" class="sortable-code">
-        <p>Trash</p>
-    </div>
-    <div id="anotherone-sortable" class="sortable-code">
-        <p>Solution</p>
-    </div>
-    <div style="clear:both;"></div>
-    <p>
-        <a href="#" id="anotherone-newInstanceLink">New instance</a>
-        <a href="#" id="anotherone-feedbackLink">Get feedback</a>
-    </p>
-    <div id="anotherone-unittest"></div>
-    <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.min.js"></script>
-    <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery-ui.min.js"></script>
-    <script src="https://js-parsons.github.io/js/js-parsons/lib/underscore-min.js"></script>
-    <script src="https://js-parsons.github.io/js/js-parsons/lib/lis.js"></script>
-    <script src="https://js-parsons.github.io/js/js-parsons/parsons.js"></script>
-    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt.js"></script>
-    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt-stdlib.js"></script>
-    <script>
-        var initial = "$$toggle::x::y::tmp$$ = " +
-            "$$toggle::x::y::tmp$$\n" +
-            "$$toggle::x::y::tmp$$ = " +
-            "$$toggle::x::y::tmp$$\n" +
-            "$$toggle::x::y::tmp$$ = " +
-            "$$toggle::x::y::tmp$$\n";
-        $(document).ready(function () {
-            var parson = new ParsonsWidget({
-                'sortableId': 'anotherone-sortable',
-                'trashId': 'anotherone-sortableTrash',
-                'vartests': [{ initcode: "x = '0'\ny='2'", code: "", message: "Testing with initial variable values x = '0' and y = '2'", variables: { x: "2" } },
-                { initcode: "x = '3'\ny='4'\n", code: "", message: "Testing with initial variable values x = '3' and y = '4'", variables: { x: "4", y: "3" } }],
-                lang: "en"
-            });
-            parson.init(initial);
-            parson.shuffleLines();
-            $("#anotherone-newInstanceLink").click(function (event) {
-                event.preventDefault();
-                parson.shuffleLines();
-            });
-            $("#anotherone-feedbackLink").click(function (event) {
-                event.preventDefault();
-                var fb = parson.getFeedback();
-                $("#anotherone-unittest").html("<h2>Feedback from testing your program:</h2>" + fb.feedback);
-                if (fb.success) { alert("Good, you solved the assignment!"); }
-            });
-        });
-    </script>
 
     <p>If you're not 100% convinced yet, here's another example with Pseudocode, toggleable values, and the turtle
         graphics grader.</p>
@@ -188,6 +167,78 @@
         });
     </script>
 
+    <h2>Example of "unittests" in js-parsons</h2>
+    <p>Your task is to construct a function which returns the index of the largest
+        element in the array.</p>
+    <div id="unittest-sortableTrash" class="sortable-code">
+        <p>Trash</p>
+    </div>
+    <div id="unittest-sortable" class="sortable-code">
+        <p>Solution</p>
+    </div>
+    <div style="clear:both;"></div>
+    <p>
+        <a href="#" id="unittest-newInstanceLink">New instance</a>
+        <a href="#" id="unittest-feedbackLink">Get feedback</a>
+    </p>
+    <div id="unittest-jsparson"></div>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery-ui.min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/underscore-min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/lis.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/parsons.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt-stdlib.js"></script>
+    <script>
+        var initial = "def maxindex(arg):\n" +
+            " ans = 0\n" +
+            " for i in range(len(arg)):\n" +
+            " if arg[i] > arg[ans]:\n" +
+            " ans = i\n" +
+            " while True:\n" +
+            "pass\n" +
+            " return ans\n";
+
+        var unittests = 'import unittestparson\n' +
+            'class myTests(unittestparson.unittest):\n' +
+            '  def testOne(self):\n' +
+            '    self.assertEqual(maxindex([0, 2, 4]),2,' +
+            '"Calling function <code>maxindex([0, 2, 4])</code>.")\n' +
+            '    self.assertEqual(maxindex([7, 2, 4]),0,' +
+            '"Calling function <code>maxindex([7, 2, 4])</code>.")\n' +
+            '    self.assertEqual(maxindex([7, 8, 4]),1,' +
+            '"Calling function <code>maxindex([7, 8, 4])</code>.")\n' +
+            '  def testTwo(self):\n' +
+            '    self.assertEqual(maxindex([0, 2, 4]),2,' +
+            '"Calling function <code>maxindex([0, 2, 4])</code>.")\n' +
+            '    self.assertEqual(maxindex([7, 2, 4]),0,' +
+            '"Calling function <code>maxindex([7, 2, 4])</code>.")\n' +
+            '    self.assertEqual(maxindex([7, 8, 4]),1,' +
+            '"Calling function <code>maxindex([7, 8, 4])</code>.")\n' +
+            '_test_result = myTests().main()';
+
+
+        $(document).ready(function () {
+            var parson = new ParsonsWidget({
+                'sortableId': 'unittest-sortable',
+                'trashId': 'unittest-sortableTrash',
+                'unittests': unittests
+            });
+            parson.init(initial);
+            parson.shuffleLines();
+            $("#unittest-newInstanceLink").click(function (event) {
+                event.preventDefault();
+                parson.shuffleLines();
+            });
+            $("#unittest-feedbackLink").click(function (event) {
+                event.preventDefault();
+                var fb = parson.getFeedback();
+                $("#unittest-jsparson").html("<h2>Feedback from testing your program:</h2>" +
+                    fb.feedback);
+                if (fb.success) { alert("Good, you solved the assignment!"); }
+            });
+        });
+    </script>
 
 </body>
 
