@@ -118,6 +118,77 @@
         });
     </script>
 
+    <p>If you're not 100% convinced yet, here's another example with Pseudocode, toggleable values, and the turtle
+        graphics grader.</p>
+    <div class="turtle-example parsons-problem">
+        <h2>Example of js-parsons turtle graphics assignment</h2>
+        <p>Construct a program by drag&amp;dropping and reordering lines from the top to the bottom. The constructed
+            program should draw a triangle like shown below. Click &nbsp;<span class="jsparson-toggle"></span>&nbsp; to
+            select the correct value for that position.</p>
+        <div class="container">
+            <div class="row">
+                <div id="turtle-example-source" class="sortable-code jsparsons-source col-md-7"></div>
+                <div class="model turtle col-md-5">
+                    <h3>Model Drawing</h3>
+                    <canvas id="modelCanvas" width="400" height="400"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div id="turtle-example-target" class="sortable-code jsparsons-target col-md-7"></div>
+                <div class="model turtle col-md-5">
+                    <h3>Your Code Drawing</h3>
+                    <canvas id="studentCanvas" width="400" height="400"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-info btn-sm btn-block reset">Reset</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-info btn-sm btn-block feedback">​Feedback​</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var initial = 'REPEAT $$toggle::2::3::4$$ TIMES\nforward(100)\nleft(120)\nENDREPEAT';
+            var parson;
+            Sk.canvas = "studentCanvas";
+            parson = new ParsonsWidget({
+                'sortableId': 'turtle-example-target',
+                'trashId': 'turtle-example-source',
+                'max_wrong_lines': 1,
+                turtleModelCode: "modelTurtle.forward(100)\n" +
+                    "modelTurtle.left(120)\nmodelTurtle.forward(100)\nmodelTurtle.left(120)\nmodelTurtle.forward(100)\n" +
+                    "modelTurtle.left(120)",
+                'grader': ParsonsWidget._graders.TurtleGrader,
+                'executable_code': "for i in range(0,$$toggle$$):\n" +
+                    "myTurtle.forward(100)\n" +
+                    "myTurtle.left(120)\n" +
+                    "pass",
+                'programmingLang': "pseudo"
+            });
+            parson.init(initial);
+            parson.shuffleLines();
+            $(".turtle-example .reset").click(function (event) {
+                event.preventDefault();
+                parson.shuffleLines();
+            });
+            $(".turtle-example .feedback").click(function (event) {
+                event.preventDefault();
+                var fb = parson.getFeedback();
+                if (fb.success) {
+                    alert("Great job, you solved the exercise!");
+                } else {
+                    alert("Sorry, your solution does not match the model image");
+                }
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
