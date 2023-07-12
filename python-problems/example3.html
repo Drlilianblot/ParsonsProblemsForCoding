@@ -49,42 +49,145 @@
 
     </header>
 <main id="content" class="main-content" role="main"><h2>Variable Swap</h2>
-<p>Describe the problem.</p>
+<p>Swapping the values between two variables.</p>
 <p>Construct a program that swaps the values of variables <code>x</code> and <code>y</code> using the helper variable <code>tmp</code>. You can change the names of the variables (<span class="jsparson-toggle"></span>) by clicking them.</p>
-<div id="p1-sortableTrash" class="sortable-code">
+<div id="p001-sortableTrash" class="sortable-code">
     <p>Trash</p>
 </div>
-<div id="p1-sortable" class="sortable-code">
+<div id="p001-sortable" class="sortable-code">
     <p>Solution</p>
 </div>
 <div style="clear:both;"></div>
 <p>
-    <a href="#p1" id="p1-newInstanceLink">New instance</a>
-    <a href="#p1" id="p1-feedbackLink">Get feedback</a>
+    <a href="#p001" id="p001-newInstanceLink">New instance</a>
+    <a href="#p001" id="p001-feedbackLink">Get feedback</a>
 </p>
-<div id="p1"></div>
+<div id="p001"></div>
 <script>
-var p1initial = "$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n" + 
+var p001initial = "$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n" + 
 "$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n" + 
 "$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n";
 $(document).ready(function () {
-    var p1parson = new ParsonsWidget({
-        'sortableId': 'p1-sortable',
-        'trashId': 'p1-sortableTrash',
+    var p001parson = new ParsonsWidget({
+        'sortableId': 'p001-sortable',
+        'trashId': 'p001-sortableTrash',
         'vartests': [{'message': '', 'initcode': "x = '1'\ny = '2'", 'code': '', 'variables': {'x': '2', 'y': '1'}}],
         lang: "en"
     });
-    p1parson.init(p1initial);
-    p1parson.shuffleLines();
-    $("#p1-newInstanceLink").click(function (event) {
+    p001parson.init(p001initial);
+    p001parson.shuffleLines();
+    $("#p001-newInstanceLink").click(function (event) {
         event.preventDefault();
-        p1parson.shuffleLines();
+        p001parson.shuffleLines();
     });
-    $("#p1-feedbackLink").click(function (event) {
+    $("#p001-feedbackLink").click(function (event) {
         event.preventDefault();
-        var p1fb = p1parson.getFeedback();
-        $("#p1-").html("<h2>Feedback from testing your program:</h2>" + p1fb.feedback);
-        if (p1fb.success) { alert("Good, you solved the assignment!"); }
+        var p001fb = p001parson.getFeedback();
+        $("#p001").html("<h2>Feedback from testing your program:</h2>" + p001fb.feedback);
+        if (p001fb.success) { alert("Good, you solved the assignment!"); }
+    });
+});
+</script>
+<h2>Largest element in an list</h2>
+<p>Find the largest element in a list.</p>
+<p>Your task is to construct a function which returns the index of the largest element in the list <code>arg</code>.</p>
+<div id="p002-sortableTrash" class="sortable-code">
+    <p>Trash</p>
+</div>
+<div id="p002-sortable" class="sortable-code">
+    <p>Solution</p>
+</div>
+<div style="clear:both;"></div>
+<p>
+    <a href="#p002" id="p002-newInstanceLink">New instance</a>
+    <a href="#p002" id="p002-feedbackLink">Get feedback</a>
+</p>
+<div id="p002"></div>
+<script>
+var p002initial = "def maxindex(arg):\n" + 
+"ans = 0\n" + 
+"for i in range(len(arg)):\n" + 
+"if arg[i] > arg[ans]:\n" + 
+"ans = i\n" + 
+"while True:\n" + 
+"pass\n" + 
+"return ans\n";
+var p002unittests = 'import unittestparson\n' + 
+'class myTests(unittestparson.unittest):\n' + 
+'  def testOne(self):\n' + 
+"    self.assertEqual(maxindex([0, 2, 4]),2, 'Calling function <code>maxindex([0, 2, 4])</code>.')\n" + 
+"    self.assertEqual(maxindex([7, 2, 4]),0, 'Calling function <code>maxindex([7, 2, 4])</code>.')\n" + 
+"    self.assertEqual(maxindex([7, 8, 4]),1, 'Calling function <code>maxindex([7, 8, 4])</code>.')\n" + 
+'  def testTwo(self):\n' + 
+"    self.assertEqual(maxindex([0, 2, 4]),2, 'Calling function <code>maxindex([0, 2, 4])</code>.')\n" + 
+"    self.assertEqual(maxindex([7, 2, 4]),0, 'Calling function <code>maxindex([7, 2, 4])</code>.')\n" + 
+"    self.assertEqual(maxindex([7, 8, 4]),1, 'Calling function <code>maxindex([7, 8, 4])</code>.')\n" + 
+'_test_result = myTests().main()';
+$(document).ready(function () {
+    var p002parson = new ParsonsWidget({
+        'sortableId': 'p002-sortable',
+        'trashId': 'p002-sortableTrash',
+        'unittests': p002unittests
+    });
+    p002parson.init(p002initial);
+    p002parson.shuffleLines();
+    $("#p002-newInstanceLink").click(function (event) {
+        event.preventDefault();
+        p002parson.shuffleLines();
+    });
+    $("#p002-feedbackLink").click(function (event) {
+        event.preventDefault();
+        var p002fb = p002parson.getFeedback();
+        $("#p002").html("<h2>Feedback from testing your program:</h2>" + p002fb.feedback);
+        if (p002fb.success) { alert("Good, you solved the assignment!"); }
+    });
+});
+</script>
+<h2>Largest element in an list</h2>
+<p>Find the largest element in a list.</p>
+<p>Your task is to construct a function which returns the index of the largest element in the list <code>arg</code>.</p>
+<div id="p003-sortableTrash" class="sortable-code">
+    <p>Trash</p>
+</div>
+<div id="p003-sortable" class="sortable-code">
+    <p>Solution</p>
+</div>
+<div style="clear:both;"></div>
+<p>
+    <a href="#p003" id="p003-newInstanceLink">New instance</a>
+    <a href="#p003" id="p003-feedbackLink">Get feedback</a>
+</p>
+<div id="p003"></div>
+<script>
+var p003initial = "def is_true(boolean_value):\n" + 
+"if boolean_value:\n" + 
+"return True\n" + 
+"return False\n" + 
+"return true #distractor\n";
+
+function displayErrors(fb) {
+    if (fb.errors.length > 0) {
+        alert(fb.errors[0]);
+    }
+}
+
+$(document).ready(function () {
+    var p003parson = new ParsonsWidget({
+        'sortableId': 'p003-sortable',
+        'trashId': 'p003-sortableTrash',
+        can_indent: false,
+        'max_wrong_lines': 1,
+        'feedback_cb': displayErrors
+    });
+    p003parson.init(p003initial);
+    p003parson.shuffleLines();
+    $("#p003-newInstanceLink").click(function (event) {
+        event.preventDefault();
+        p003parson.shuffleLines();
+    });
+    $("#p003-feedbackLink").click(function (event) {
+        event.preventDefault();
+        p003parson.getFeedback();
     });
 });
 </script>
