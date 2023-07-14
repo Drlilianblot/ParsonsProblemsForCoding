@@ -1,6 +1,16 @@
 <!doctype html>
 <html>
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCN8CVSXTZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LCN8CVSXTZ');
+    </script>
     <title>Site title 1</title>
     <link rel="stylesheet" href="https://js-parsons.github.io/js/js-parsons/parsons.css" />
     <link rel="stylesheet" href="https://js-parsons.github.io/js/js-parsons/lib/prettify.css" />
@@ -19,18 +29,16 @@
     <meta name="generator" content="Jekyll v3.9.3" />
     <meta property="og:title" content="Page title week 1" />
     <meta property="og:locale" content="en_US" />
-    <meta name="description"
-        content="Some exercises covered in week 1" />
-    <meta property="og:description"
-        content="Some exercises covered in week 1" />
+    <meta name="description" content="Some exercises covered in week 1" />
+    <meta property="og:description" content="Some exercises covered in week 1" />
     <link rel="canonical" href="/ParsonsProblemsForCoding/" />
     <meta property="og:url" content="/ParsonsProblemsForCoding/" />
     <meta property="og:site_name" content="Parsons UI Example" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="Python Coding Multiple Parson’s Problems on One Page" />
+    <meta property="twitter:title" content="Python Coding Multiple Parsonï¿½s Problems on One Page" />
     <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Drag or shuffle the blocks of code in the practice problems below. Remember to indent where appropriate by dragging blocks to the right. To check your work, press the “Get Feedback” button. To start over, press the “Reset Problem” button.","headline":"Python Coding Multiple Parson’s Problems on One Page","name":"Parsons UI Example","url":"/ParsonsProblemsForCoding/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","description":"Drag or shuffle the blocks of code in the practice problems below. Remember to indent where appropriate by dragging blocks to the right. To check your work, press the ï¿½Get Feedbackï¿½ button. To start over, press the ï¿½Reset Problemï¿½ button.","headline":"Python Coding Multiple Parsonï¿½s Problems on One Page","name":"Parsons UI Example","url":"/ParsonsProblemsForCoding/"}</script>
     <!-- End Jekyll SEO tag -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,6 +47,7 @@
     <link rel="stylesheet"
         href="/ParsonsProblemsForCoding/assets/css/style.css?v=58b89b615edabeef69b52a8122da51bd4b360d60">
 </head>
+
 <body>
     <header class="page-header" role="banner">
         <h1 class="project-name">Page title week 1</h1>
@@ -48,58 +57,63 @@
 
 
     </header>
-<main id="content" class="main-content" role="main"><h2>Variable Swap</h2>
-<p>Swapping the values between two variables.</p>
-<p>Construct a program that swaps the values of variables <code>x</code> and <code>y</code> using the helper variable <code>tmp</code>. You can change the names of the variables (<span class="jsparson-toggle"></span>) by clicking them.</p>
-<div id="p001-sortableTrash" class="sortable-code">
-    <p>Trash</p>
-</div>
-<div id="p001-sortable" class="sortable-code">
-    <p>Solution</p>
-</div>
-<div style="clear:both;"></div>
-<p>
-    <a href="#p001" id="p001-newInstanceLink">New instance</a>
-    <a href="#p001" id="p001-feedbackLink">Get feedback</a>
-</p>
-<div id="p001"></div>
-<script>
-var p001initial = '$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n' + 
-'$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n' + 
-'$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n';
-$(document).ready(function () {
-    var p001parson = new ParsonsWidget({
-        'sortableId': 'p001-sortable',
-        'trashId': 'p001-sortableTrash',
-        'vartests': [{'message': '', 'initcode': "x = '1'\ny = '2'", 'code': '', 'variables': {'x': '2', 'y': '1'}}],
-        lang: "en"
-    });
-    p001parson.init(p001initial);
-    p001parson.shuffleLines();
-    $("#p001-newInstanceLink").click(function (event) {
-        event.preventDefault();
-        p001parson.shuffleLines();
-    });
-    $("#p001-feedbackLink").click(function (event) {
-        event.preventDefault();
-        var p001fb = p001parson.getFeedback();
-        $("#p001").html("<h2>Feedback from testing your program:</h2>" + p001fb.feedback);
-        if (p001fb.success) { alert("Good, you solved the assignment!"); }
-    });
-});
-</script>
-<hr>
-<center>
-<p><a href="./week2-parsons-exercises.html">Next</a></p>
-</center>
-</main>
-<footer class="site-footer">
+    <main id="content" class="main-content" role="main">
+        <h2>Variable Swap</h2>
+        <p>Swapping the values between two variables.</p>
+        <p>Construct a program that swaps the values of variables <code>x</code> and <code>y</code> using the helper
+            variable <code>tmp</code>. You can change the names of the variables (<span class="jsparson-toggle"></span>)
+            by clicking them.</p>
+        <div id="p001-sortableTrash" class="sortable-code">
+            <p>Trash</p>
+        </div>
+        <div id="p001-sortable" class="sortable-code">
+            <p>Solution</p>
+        </div>
+        <div style="clear:both;"></div>
+        <p>
+            <a href="#p001" id="p001-newInstanceLink">New instance</a>
+            <a href="#p001" id="p001-feedbackLink">Get feedback</a>
+        </p>
+        <div id="p001"></div>
+        <script>
+            var p001initial = '$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n' +
+                '$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n' +
+                '$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n';
+            $(document).ready(function () {
+                var p001parson = new ParsonsWidget({
+                    'sortableId': 'p001-sortable',
+                    'trashId': 'p001-sortableTrash',
+                    'vartests': [{ 'message': '', 'initcode': "x = '1'\ny = '2'", 'code': '', 'variables': { 'x': '2', 'y': '1' } }],
+                    lang: "en"
+                });
+                p001parson.init(p001initial);
+                p001parson.shuffleLines();
+                $("#p001-newInstanceLink").click(function (event) {
+                    event.preventDefault();
+                    p001parson.shuffleLines();
+                });
+                $("#p001-feedbackLink").click(function (event) {
+                    event.preventDefault();
+                    var p001fb = p001parson.getFeedback();
+                    $("#p001").html("<h2>Feedback from testing your program:</h2>" + p001fb.feedback);
+                    if (p001fb.success) { alert("Good, you solved the assignment!"); }
+                });
+            });
+        </script>
+        <hr>
+        <center>
+            <p><a href="./week2-parsons-exercises.html">Next</a></p>
+        </center>
+    </main>
+    <footer class="site-footer">
 
-    <span class="site-footer-owner"><a
-            href="https://github.com/Drlilianblot/ParsonsProblemsForCoding/">ParsonsProblemsForCoding</a> is
-        maintained by <a href="https://github.com/Drlilianblot">Drlilianblot</a>.</span>
+        <span class="site-footer-owner"><a
+                href="https://github.com/Drlilianblot/ParsonsProblemsForCoding/">ParsonsProblemsForCoding</a> is
+            maintained by <a href="https://github.com/Drlilianblot">Drlilianblot</a>.</span>
 
-    <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub
-            Pages</a>.</span>
-</footer></body>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub
+                Pages</a>.</span>
+    </footer>
+</body>
+
 </html>
