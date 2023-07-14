@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+    <title>Site title 2</title>
+    <link rel="stylesheet" href="https://js-parsons.github.io/js/js-parsons/parsons.css" />
+    <link rel="stylesheet" href="https://js-parsons.github.io/js/js-parsons/lib/prettify.css" />
+    <meta charset="utf8" />
+    <link rel="stylesheet" href="https://127.0.0.1:50153/stylesheet?id=moyCosb3pjeLDKQ0">
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery-ui.min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt-stdlib.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/underscore-min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/lis.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/parsons.js"></script>
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>Page title week 2</title>
+    <meta name="generator" content="Jekyll v3.9.3" />
+    <meta property="og:title" content="Page title week 2" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description"
+        content="Some exercises covered in week 2" />
+    <meta property="og:description"
+        content="Some exercises covered in week 2" />
+    <link rel="canonical" href="/ParsonsProblemsForCoding/" />
+    <meta property="og:url" content="/ParsonsProblemsForCoding/" />
+    <meta property="og:site_name" content="Parsons UI Example" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Python Coding Multiple Parson’s Problems on One Page" />
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Drag or shuffle the blocks of code in the practice problems below. Remember to indent where appropriate by dragging blocks to the right. To check your work, press the “Get Feedback” button. To start over, press the “Reset Problem” button.","headline":"Python Coding Multiple Parson’s Problems on One Page","name":"Parsons UI Example","url":"/ParsonsProblemsForCoding/"}</script>
+    <!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet"
+        href="/ParsonsProblemsForCoding/assets/css/style.css?v=58b89b615edabeef69b52a8122da51bd4b360d60">
+</head>
+<body>
+    <header class="page-header" role="banner">
+        <h1 class="project-name">Page title week 2</h1>
+        <h2 class="project-tagline">Some exercises covered in week 2</h2>
+
+        <a href="https://github.com/Drlilianblot/ParsonsProblemsForCoding/" class="btn">View on GitHub</a>
+
+
+    </header>
+<main id="content" class="main-content" role="main"><h2>Largest element in an list</h2>
+<p>Find the largest element in a list.</p>
+<p>Your task is to construct a function which returns the index of the largest element in the list <code>arg</code>.</p>
+<div id="p002-sortableTrash" class="sortable-code">
+    <p>Trash</p>
+</div>
+<div id="p002-sortable" class="sortable-code">
+    <p>Solution</p>
+</div>
+<div style="clear:both;"></div>
+<p>
+    <a href="#p002" id="p002-newInstanceLink">New instance</a>
+    <a href="#p002" id="p002-feedbackLink">Get feedback</a>
+</p>
+<div id="p002"></div>
+<script>
+var p002initial = 'def maxindex(arg):\n' + 
+' ans = 0\n' + 
+' for i in range(len(arg)):\n' + 
+' if arg[i] > arg[ans]:\n' + 
+' ans = i\n' + 
+' while True:\n' + 
+'pass\n' + 
+' return ans\n';
+var p002unittests = 'import unittestparson\n' + 
+'class myTests(unittestparson.unittest):\n' + 
+'  def testOne(self):\n' + 
+"    self.assertEqual(maxindex([0, 2, 4]),2, 'Calling function <code>maxindex([0, 2, 4])</code>.')\n" + 
+"    self.assertEqual(maxindex([7, 2, 4]),0, 'Calling function <code>maxindex([7, 2, 4])</code>.')\n" + 
+"    self.assertEqual(maxindex([7, 8, 4]),1, 'Calling function <code>maxindex([7, 8, 4])</code>.')\n" + 
+'  def testTwo(self):\n' + 
+"    self.assertEqual(maxindex([0, 2, 4]),2, 'Calling function <code>maxindex([0, 2, 4])</code>.')\n" + 
+"    self.assertEqual(maxindex([7, 2, 4]),0, 'Calling function <code>maxindex([7, 2, 4])</code>.')\n" + 
+"    self.assertEqual(maxindex([7, 8, 4]),1, 'Calling function <code>maxindex([7, 8, 4])</code>.')\n" + 
+'_test_result = myTests().main()';
+$(document).ready(function () {
+    var p002parson = new ParsonsWidget({
+        'sortableId': 'p002-sortable',
+        'trashId': 'p002-sortableTrash',
+        'unittests': p002unittests
+    });
+    p002parson.init(p002initial);
+    p002parson.shuffleLines();
+    $("#p002-newInstanceLink").click(function (event) {
+        event.preventDefault();
+        p002parson.shuffleLines();
+    });
+    $("#p002-feedbackLink").click(function (event) {
+        event.preventDefault();
+        var p002fb = p002parson.getFeedback();
+        $("#p002").html("<h2>Feedback from testing your program:</h2>" + p002fb.feedback);
+        if (p002fb.success) { alert("Good, you solved the assignment!"); }
+    });
+});
+</script>
+<hr>
+<center>
+<p><a href="./html/week1-parsons-exercises.html">Previous</a> | <a href="./html/week3-parsons-exercises.html">Next</a></p>
+</center>
+</main>
+<footer class="site-footer">
+
+    <span class="site-footer-owner"><a
+            href="https://github.com/Drlilianblot/ParsonsProblemsForCoding/">ParsonsProblemsForCoding</a> is
+        maintained by <a href="https://github.com/Drlilianblot">Drlilianblot</a>.</span>
+
+    <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub
+            Pages</a>.</span>
+</footer></body>
+</html>
